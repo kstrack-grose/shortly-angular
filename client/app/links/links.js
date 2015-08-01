@@ -17,7 +17,7 @@ angular.module('shortly.links', [])
 
   $scope.getLinks();
 
-  $scope.redirect = function (url) {
+  $scope.redirectLink = function (url) {
     var code = '/api/links/' + url;
     console.log(22, code);
     // $location.path(code);

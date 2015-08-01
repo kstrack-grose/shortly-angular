@@ -79,6 +79,8 @@ module.exports = {
       if (err) {
         next(err);
       } else {
+        var newUrl = savedLink.base_url+"/api/links/" + savedLink.code; 
+        console.log(83, savedLink.url);
         res.redirect(savedLink.url);
       }
     });

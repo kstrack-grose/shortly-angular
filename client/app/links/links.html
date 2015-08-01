@@ -3,7 +3,7 @@
   
   <div ng-repeat="(key, value) in data track by $index">
 
-    <div class="link" ng-repeat="(link, url) in value " ng-click = "redirect(url.code)">
+    <div class="link" ng-repeat="(link, url) in value " ng-click = "redirectLink(url.code)">
       <img src="../../assets/redirect_icon.png">
       <div class="title"> {{ url.title }} </div>
       <div > {{ url.base_url + '/#/' + url.code }} </div>
