@@ -1,8 +1,8 @@
 <div id='container' ng-app = "shortly.shorten" ng-controller = "ShortenController">
 <!-- Your code here -->
-<form name="shortenForm" ng-submit='addLink(newLink)'>
-  <input type='text'ng-model='link.url'>
-  <button>submit</button>
+<form name="shortenForm" ng-submit='addLink(shortenForm.$valid)' novalidate>
+  <input type='url'ng-model='link.url' required>
+  <button type="submit" ng-disabled = "shortenForm.$invalid">submit</button>
 </form>
 </div>
 
