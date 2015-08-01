@@ -5,14 +5,16 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
   
   $scope.addLink = function () {
+    console.log($scope.link.url);
     Links.addLink($scope.link)
-      .then(function (token) {
-        // $window.localStorage.setItem('com.shortly', token);
-        $location.path('/links');
-        console.log(11, token);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    .then(function(resp) {
+      console.log('12, then after addlink');
+      return resp;
+    })
+    .catch(function(err) {
+      console.log(14, err);
+    })
+
+    $scope.link = '';
   };
 });

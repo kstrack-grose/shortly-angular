@@ -7,21 +7,16 @@ angular.module('shortly.services', [])
       url: '/api/links'
       // data: link
     })
-    .then(function (resp) {
-      // return resp.data.token;
-      return resp.data;
-    });
   };
   
   var addLink = function(link) {
+    console.log(17, 'addlink');
     return $http({
       method: 'POST',
       url: '/api/links',
       data: link
-    })
-    .then(function(resp) {
-      return resp.data;
     });
+
   };
   
   return {
