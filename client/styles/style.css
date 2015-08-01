@@ -113,6 +113,10 @@ input[type=url]:focus {
   outline: none;
 }
 
+.searchLinks {
+  margin: 20px 40px;
+}
+
 
 .error {
   border: red solid 4px;
