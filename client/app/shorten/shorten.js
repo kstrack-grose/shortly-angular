@@ -6,9 +6,10 @@ angular.module('shortly.shorten', [])
   
   $scope.addLink = function () {
     console.log($scope.link.url);
+    //validate $scope.link.url
     Links.addLink($scope.link)
     .then(function(resp) {
-      console.log('12, then after addlink');
+      $location.path('/links');
       return resp;
     })
     .catch(function(err) {
