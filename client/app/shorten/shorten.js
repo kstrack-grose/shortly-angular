@@ -5,7 +5,7 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
   
   $scope.addLink = function (isValid) {
-    console.log($scope.link.url);
+    $scope.link.shortLink = '/api/links/' + $scope.link.code;
     if (isValid) {
       Links.addLink($scope.link)
       .then(function(resp) {
